@@ -1,0 +1,12 @@
+Description: Implement either a simulated annealing or genetic algorithm solution to the problem given below. Your solution should be written in Java and run on the Linux machines in the R Block labs unless prior arrangement is made with the marking tutor for an alternative specification. This assignment must be done in pairs, and it is recommended you find a different partner from the previous assignment (use Moodle forum or ask the tutor for help finding a new partner).
+
+Problem: A small cargo boat is ready to be loaded at a dock. The boat has a maximum volume of storage and a maximum weight of goods it can carry. On the wharf are more cargo items than the boat can carry. Each item has a volume, a weight, a purchase cost and a resale value (such that the profit to the boat owner for a given item is the difference between its cost and value).
+
+The owner has asked you to compute the subset of goods he should load on to his boat to maximize his profit. The relevant details are as follows:
+
+the items are described in a plain text file whose name is to be provided as the last command-line argument to your program.
+each of the N lines of the file has four positive floating point values (separated by spaces) corresponding to the volume, weight, cost and value of an available item.
+because the available displacement and hold-capacity of the boat changes each trip (i.e. not always empty), and the amount of money for buying cargo also varies, your program also needs to accept three floating point values as command-line arguments, where the first is the maximum available volume, the second is the maximum weight of goods that can be taken aboard, and the third is the maximum purchase price of the entire cargo that the owner can afford.
+using a genetic algorithm or simulated annealing, find the best subset of cargo you can to maximize profit from the voyage.
+output (to standard out) is an ordered list of indices into the input file identifying the cargo items that comprise the best manifest (index from 1 to N).
+the number of potential solutions is 2N but your program must proffer a solution in a tractable amount of time; therefore your program must take an integer as a fourth command-line argument specifying how many seconds of compute time it can take to finish (recommended: look at Java's System.nanotime()).
